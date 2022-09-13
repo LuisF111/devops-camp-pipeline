@@ -2,6 +2,7 @@ pipeline {
     agent {
         label 'jenkins-agent'
     }
+    // envs
     environment {
         PIPELINE_HASH = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
         HARBOR_REGISTRY = 'harbor.dev.afsmtddso.com'
